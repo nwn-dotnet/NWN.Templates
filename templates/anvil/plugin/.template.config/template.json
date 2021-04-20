@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Jorteck",
+  "identity": "NWN.Templates.Anvil.Plugin",
+  "name": "NWN DotNET Anvil Plugin",
+  "shortName": "anvilplugin",
+  "defaultName": "MyPlugin",
+  "sourceName": "MyPlugin",
+  "classifications": [
+    "Plugin",
+    "Library",
+    "NWN",
+    "Anvil"
+  ],
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}
