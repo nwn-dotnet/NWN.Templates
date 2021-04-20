@@ -60,7 +60,7 @@ jobs:
 
       - name: Build Release Binaries
         id: build
-        run: dotnet build --configuration Release -p:Version=${{ steps.vars.outputs.version }} -o output
+        run: dotnet pack --configuration Release -p:Version=${{ steps.vars.outputs.version }} -o output
        
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v2
