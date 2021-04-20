@@ -1,12 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
         <PackageType>Template</PackageType>
         <PackageId>NWN.Templates</PackageId>
         <Authors>NWN.NET</Authors>
         <PackageTags>Neverwinter Nights;NWN;</PackageTags>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <TargetFramework>net5.0</TargetFramework>
+        <RepositoryUrl>https://github.com/nwn-dotnet/NWN.Templates</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <ContentTargetFolders>content</ContentTargetFolders>
