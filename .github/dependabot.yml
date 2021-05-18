@@ -1,7 +1,7 @@
 version: 2
 updates:
 - package-ecosystem: nuget
-  directory: "/"
+  directory: "/templates/anvil/plugin/"
   schedule:
     interval: daily
   open-pull-requests-limit: 10
