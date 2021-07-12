@@ -24,7 +24,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="NWN.Anvil" Version="8193.22.4-dev.0" ExcludeAssets="runtime" />
+        <PackageReference Include="NWN.Anvil" Version="8193.26.0-rc.1" ExcludeAssets="runtime" />
     </ItemGroup>
 
 </Project>
