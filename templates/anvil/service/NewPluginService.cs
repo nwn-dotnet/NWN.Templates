@@ -1,4 +1,4 @@
-using NWN.Services;
+using Anvil.Services;
 
 [ServiceBinding(typeof(NewPluginService))]
 public class NewPluginService
