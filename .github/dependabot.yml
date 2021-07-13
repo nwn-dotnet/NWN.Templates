@@ -4,3 +4,7 @@ updates:
   directory: "/templates/anvil/plugin/"
   schedule:
     interval: daily
+- package-ecosystem: "nuget"
+  directory: "/templates/anvil/service/"
+  schedule:
+    interval: daily
