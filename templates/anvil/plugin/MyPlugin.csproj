@@ -1,30 +1,65 @@
 <Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
 
-    <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
-        <LangVersion>9</LangVersion>
-        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-        <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
-        <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
-        <RootNamespace>MyPlugin</RootNamespace>
-    </PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <OutputPath>bin\Debug\$(AssemblyName)</OutputPath>
-        <PlatformTarget>x64</PlatformTarget>
-    </PropertyGroup>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-        <OutputPath>bin\Release\$(AssemblyName)</OutputPath>
-        <DebugSymbols>false</DebugSymbols>
-        <DebugType>None</DebugType>
-        <PlatformTarget>x64</PlatformTarget>
-    </PropertyGroup>
+    <RootNamespace>MyPlugin</RootNamespace>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <PackageReference Include="NWN.Anvil" Version="8193.26.3" ExcludeAssets="runtime" />
-    </ItemGroup>
+<!--Uncomment and fill to build a NuGet package for your plugin.-->
+<!--
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <PackageId>$(AssemblyName)</PackageId>
+    <Authors></Authors>
+
+    <RepositoryUrl></RepositoryUrl>
+    <RepositoryType></RepositoryType>
+
+    <Description>
+      A NWN Anvil plugin: https://github.com/nwn-dotnet/Anvil
+    </Description>
+
+    <PackageTags>Neverwinter Nights;NWN;</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+-->
+
+<!--Uncomment to include debug symbols, source code and documentation with your nuget package/plugin.-->
+<!--
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <DebugSymbols>true</DebugSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+-->
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\$(AssemblyName)</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\$(AssemblyName)</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NWN.Anvil" Version="8193.26.0-rc.1" ExcludeAssets="runtime"/>
+  </ItemGroup>
 
 </Project>
