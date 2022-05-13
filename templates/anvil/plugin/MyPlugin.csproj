@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <LangVersion>9.0</LangVersion>
     <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
 
@@ -12,6 +12,7 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
 
     <NoWarn>1591</NoWarn>
+    <Nullable>enable</Nullable>
 
     <RootNamespace>MyPlugin</RootNamespace>
   </PropertyGroup>
@@ -61,7 +62,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NWN.Anvil" Version="8193.33.5" ExcludeAssets="runtime" PrivateAssets="all"/>
+    <PackageReference Include="NWN.Anvil" Version="8193.33.10" ExcludeAssets="runtime" PrivateAssets="all"/>
   </ItemGroup>
 
 </Project>
