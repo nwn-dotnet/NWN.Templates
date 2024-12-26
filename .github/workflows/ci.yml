@@ -63,7 +63,7 @@ jobs:
         run: dotnet pack --configuration Release -p:Version=${{ steps.vars.outputs.version }} -o output
        
       - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: Binaries
           path: output/
